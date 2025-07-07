@@ -23,14 +23,15 @@ export default function Main() {
     if (sourceText) {
       const delay = setTimeout(() => {
         handleTranslate();
-      }, 600);
+      }, 400);
 
       return () => clearTimeout(delay);
     }
-  }, [sourceText]);
+  }, [sourceText, targetLang, sourceLang]);
 
   const handleTranslate = async () => {
     setIsLoading(true);
+    setError("");
 
     try {
       const response = await fetch(
