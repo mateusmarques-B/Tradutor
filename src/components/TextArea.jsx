@@ -18,13 +18,13 @@ export default function TextArea({
         </div>
 
         <div className="p-4 relative bg-[#f5f5f5] border-l border-gray-200">
-          <div className="absolute inset-0 flex items-center justify-center">
-            {isLoading ? (
+           {isLoading ? (
+            <div className="absolute inset-0 flex items-center justify-center">
               <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-blue-500"></div>
-            ) : (
+            </div>
+          ) : (
               <p className="text-lg text-[#3c4043]">{translatedText} </p>
-            )}
-          </div>
+          )}
         </div>
       </div>
 
